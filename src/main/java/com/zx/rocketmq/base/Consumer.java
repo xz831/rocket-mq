@@ -16,7 +16,7 @@ public class Consumer {
     public static void main(String[] args) throws Exception{
         DefaultMQPushConsumer consumer = new DefaultMQPushConsumer("group1");
         consumer.setNamesrvAddr("127.0.0.1:9876");
-        consumer.subscribe("base","Tag1");
+        consumer.subscribe("base","Tag2");
 //        consumer.setMessageModel(MessageModel.BROADCASTING);
         consumer.registerMessageListener((MessageListenerConcurrently) (list, consumeConcurrentlyContext) -> {
             list.forEach(item->{
